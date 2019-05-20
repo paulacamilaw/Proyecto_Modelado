@@ -1,0 +1,5 @@
+1. Descargar VisIt
+2. Entender cómo se leen los datos para visualizarlos en VisIt
+3. Crear el código para transformar los datos del formato en que se obtienen de las simulaciones, al formato que require VisIt para visualizar
+4. Crear el código para visualizar en 3D en VisIt
+5. Crear un script para automatizar el proceso de crear y salvar las gráficas para diferentes conjuntos de datos
