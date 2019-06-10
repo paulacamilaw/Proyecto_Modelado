@@ -26,7 +26,7 @@ f = open('primitivas_1.xyzl', 'r')
 
 def extraer(parametro):
     variable = str(parametro.split('-')[0])
-    bloque = parametro.split('-')[1]
+    bloque = format(int(parametro.split('-')[1]), '02')
     t = dt*float(bloque)*every3D
     print 'Extrayendo la variable',variable,'en el bloque',bloque,'en',t, 'segundos.'
     
@@ -35,8 +35,11 @@ def extraer(parametro):
     for a in range (0,skip+3):
         f.readline()
 
-    w = open('Databloque%s.3D'%bloque, 'wt')
-    w.write("x y z value\n");
+    w = open('%s_b%s.3D'%(variable,bloque), 'wt')
+    if ((variable == 'vectv') or (variable == 'vectB')):
+        w.write('x y z valuex valuey valuez\n');
+    elif ((variable != 'vectv') or (variable != 'vectB')):
+        w.write('x y z value\n');
     
     for i in range (0,Nzz+1):
         f.readline() 
@@ -68,6 +71,10 @@ def extraer(parametro):
                     w.write('%g %g %g %g\n' %(float(x),float(y),float(z),float(By)))
                 elif (variable == 'Bz'):
                     w.write('%g %g %g %g\n' %(float(x),float(y),float(z),float(Bz)))
+                elif (variable == 'vectv'):
+                    w.write('%g %g %g %g %g %g\n' %(float(x),float(y),float(z),float(vx),float(vy),float(vz)))
+                elif (variable == 'vectB'):
+                    w.write('%g %g %g %g %g %g\n' %(float(x),float(y),float(z),float(Bx),float(By),float(Bz)))
                 else: print 'Ingresa una variable valida entre rho, vx, vy, vz, press, Bx, By, Bz, v, B'
     w.close()
     f.close()
