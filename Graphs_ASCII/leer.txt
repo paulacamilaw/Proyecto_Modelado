@@ -1,3 +1,0 @@
-Para visualizar los datos ASCII en VisIt, se debe añadir una fila al principio con los nombres de las columnas. Además, se debe tener en cuenta que si se quieren leer datos de una malla 3D, solo se puede poner una variable por archivo, es decir, X Y Z value.
-
-Para abrir el archivo de datos ASCII en VisIt: ./visit -assume_format Point3D -o Visit/FILENAME
