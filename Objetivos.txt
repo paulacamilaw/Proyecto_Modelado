@@ -1,5 +1,9 @@
-1. Descargar VisIt
-2. Entender cómo se leen los datos para visualizarlos en VisIt
-3. Crear el código para transformar los datos del formato en que se obtienen de las simulaciones, al formato que require VisIt para visualizar
+1. Descargar VisIt (DONE)
+2. Entender cómo se leen los datos para visualizarlos en VisIt (DONE)
+3. Crear el código para transformar los datos del formato en que se obtienen de las simulaciones, al formato que require VisIt para visualizar (DONE)
 4. Crear el código para visualizar en 3D en VisIt
 5. Crear un script para automatizar el proceso de crear y salvar las gráficas para diferentes conjuntos de datos
+
+Los objetivos 4 y 5 no se completaron. El 4 no es necesario ya que todo se hace de manera visual y el 5 no fue posible ya que como son gráficas 3D, no se puden salvar solas, sino que se debe escoger el plano más conveniente para observar los datos.
+
+Además de lo anterior, se creó un extractor de bloques de tiempo por variable ne python y un script en bash para automatizar muchos procesos.
