@@ -116,3 +116,11 @@ venv.bak/
 *.cb
 *.cb2
 .*.lb
+*.tex
+*.nav
+*.snm
+*.gz
+
+# Archivos de datos
+*.xyzl
+*.par
